@@ -14,6 +14,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform m_CeilingCheck;                          // A position marking where to check for ceilings
     [SerializeField] private Collider2D m_CrouchDisableCollider;                // A collider that will be disabled when crouching
 
+    [SerializeField] private GameObject companionBot;                           //Bot companion that moves with the player
+    [SerializeField] private CameraController cameraFlip;                                     //For camera follow offset flip
+
     const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
     private bool m_Grounded;            // Whether or not the player is grounded.
     const float k_CeilingRadius = .2f; // Radius of the overlap circle to determine if the player can stand up
@@ -145,5 +148,15 @@ public class PlayerController : MonoBehaviour
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
+
+        //Multiply the companion bot's local scale by -1
+        Vector3 botScale = companionBot.transform.localScale;
+        botScale.x *= -1;
+        companionBot.transform.localScale = botScale;
+
+        //Flip the camera offset
+        Vector3 flipOffset = cameraFlip.offset;
+        flipOffset.x *= -1;
+        cameraFlip.offset = flipOffset;
     }
 }
