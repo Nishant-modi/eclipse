@@ -12,13 +12,14 @@ public class TimeController : MonoBehaviour
     public Volume ppv; // this is the post processing volume
 
     public float tick; // Increasing the tick, increases second rate
-    public float seconds;
-    public int mins;
-    public int hours;
-    public int days = 1;
+    float seconds;
+    int mins;
+    int hours;
+    int days = 1;
 
-    public bool activateLights; // checks if lights are on
+    bool activateLights; // checks if lights are on
     public GameObject[] lights; // all the lights we want on when its dark
+    public bool isDay;
     //public SpriteRenderer[] stars; // star sprites 
     // Start is called before the first frame update
     void Start()
@@ -87,6 +88,7 @@ public class TimeController : MonoBehaviour
                     activateLights = true;
                 }
             }
+            isDay = false;
         }
 
 
@@ -108,6 +110,7 @@ public class TimeController : MonoBehaviour
                     activateLights = false;
                 }
             }
+            isDay = true;
         }
     }
 
