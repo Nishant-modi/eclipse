@@ -1446,9 +1446,11 @@ MonoBehaviour:
   firePoint: {fileID: 1158159129}
   bulletPrefab: {fileID: 7007682637793533145, guid: c6b22e36e00faf242bdd19d4e2f85648, type: 3}
   multipleFire: 0
-  bulletSpeed: 20
+  isShield: 0
+  bulletSpeed: 5
   bulletDamage: 10
-  bulletGravityScale: 0.01
+  bulletGravityScale: 0.7
+  shotgunAngle: 12
 --- !u!114 &401558150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1576,10 +1578,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 1518846272}
   bulletPrefab: {fileID: 7007682637793533145, guid: c6b22e36e00faf242bdd19d4e2f85648, type: 3}
-  multipleFire: 0
+  multipleFire: 1
+  isShield: 0
   bulletSpeed: 20
-  bulletDamage: 10
+  bulletDamage: 5
   bulletGravityScale: 0.01
+  shotgunAngle: 6
 --- !u!114 &466699404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1892,9 +1896,11 @@ MonoBehaviour:
   firePoint: {fileID: 305812414}
   bulletPrefab: {fileID: 7007682637793533145, guid: c6b22e36e00faf242bdd19d4e2f85648, type: 3}
   multipleFire: 0
+  isShield: 0
   bulletSpeed: 20
-  bulletDamage: 10
+  bulletDamage: 5
   bulletGravityScale: 0.01
+  shotgunAngle: 12
 --- !u!114 &499135876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3136,9 +3142,11 @@ MonoBehaviour:
   firePoint: {fileID: 764217051}
   bulletPrefab: {fileID: 7007682637793533145, guid: c6b22e36e00faf242bdd19d4e2f85648, type: 3}
   multipleFire: 0
-  bulletSpeed: 20
-  bulletDamage: 10
+  isShield: 0
+  bulletSpeed: 10
+  bulletDamage: 5
   bulletGravityScale: 0.01
+  shotgunAngle: 12
 --- !u!1 &1016723115
 GameObject:
   m_ObjectHideFlags: 0
@@ -3239,9 +3247,11 @@ MonoBehaviour:
   firePoint: {fileID: 1562851904}
   bulletPrefab: {fileID: 7007682637793533145, guid: c6b22e36e00faf242bdd19d4e2f85648, type: 3}
   multipleFire: 0
+  isShield: 0
   bulletSpeed: 20
   bulletDamage: 10
   bulletGravityScale: 0.01
+  shotgunAngle: 12
 --- !u!114 &1050010131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3898,9 +3908,11 @@ MonoBehaviour:
   firePoint: {fileID: 2134630646}
   bulletPrefab: {fileID: 7007682637793533145, guid: c6b22e36e00faf242bdd19d4e2f85648, type: 3}
   multipleFire: 0
+  isShield: 0
   bulletSpeed: 20
-  bulletDamage: 10
+  bulletDamage: 15
   bulletGravityScale: 0.01
+  shotgunAngle: 12
 --- !u!114 &1245806028
 MonoBehaviour:
   m_ObjectHideFlags: 0

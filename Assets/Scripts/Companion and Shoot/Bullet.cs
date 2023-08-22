@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float speed = 20f;
-    public int bulletDamage = 10;
+    public float speed;
+    public int damage;
     public Rigidbody2D rb;
     
     // Start is called before the first frame update
@@ -19,9 +19,13 @@ public class Bullet : MonoBehaviour
         if(collision.transform.tag == "Enemy")
         {
             ZombieHealth zh = collision.GetComponent<ZombieHealth>();
-            zh.TakeDamage(bulletDamage);
+            zh.TakeDamage(damage);
         }
 
-        Destroy(gameObject);
+        if(collision.transform.tag != "Bullet")
+        {
+            Destroy(gameObject);
+        }
+        
     }
 }
