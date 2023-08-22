@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e8cd042b3d8b56141a4f666ca468baf8
+guid: ed0c366cb596207488961bb603d0a577
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -141,7 +141,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Pingu Robot_0
+      name: ShieldCompanion_0
       rect:
         serializedVersion: 2
         x: 0
@@ -155,14 +155,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea5e446ae61b5ad44ac7b21c0d5e2ee9
-      internalID: -291633380
+      spriteID: 33a33e8f40d12fe48b84a8a9085fbd6c
+      internalID: -1227375741
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pingu Robot_1
+      name: ShieldCompanion_1
       rect:
         serializedVersion: 2
         x: 24
@@ -176,14 +176,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2befdbca3f3f2e54db4257e7da3a1233
-      internalID: 11993365
+      spriteID: 24a3c2065c38c1744a5c25d981617f7f
+      internalID: -1706593453
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pingu Robot_2
+      name: ShieldCompanion_2
       rect:
         serializedVersion: 2
         x: 48
@@ -197,14 +197,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86095517c57262141a344a4d7eaed3ef
-      internalID: 1873628934
+      spriteID: 07d25bbdaf0912e4fb6405b1af466f80
+      internalID: -68973789
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pingu Robot_3
+      name: ShieldCompanion_3
       rect:
         serializedVersion: 2
         x: 72
@@ -218,14 +218,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab32b360d1967f04b8c24742a31b0e86
-      internalID: 189025202
+      spriteID: 67f7224fc54d6704d96098b4a284a479
+      internalID: -836311855
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pingu Robot_4
+      name: ShieldCompanion_4
       rect:
         serializedVersion: 2
         x: 96
@@ -239,14 +239,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c02cf37adb1f9d849976ef66b4d318b4
-      internalID: -784901265
+      spriteID: 3991f458aa8f6e44d8237b9ce0e62300
+      internalID: 330624810
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pingu Robot_5
+      name: ShieldCompanion_5
       rect:
         serializedVersion: 2
         x: 120
@@ -260,14 +260,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f380b37158f69d34ebb4bb61853befcb
-      internalID: -1210535592
+      spriteID: 2a7b9bc5ed454ef46aa4d2abd7994323
+      internalID: 258589687
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pingu Robot_6
+      name: ShieldCompanion_6
       rect:
         serializedVersion: 2
         x: 144
@@ -281,14 +281,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 770e93ee6fbe6494b8f28b83f8719968
-      internalID: -972989019
+      spriteID: 21fc071ac1bc5ac47a463f065efac107
+      internalID: -951558816
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pingu Robot_7
+      name: ShieldCompanion_7
       rect:
         serializedVersion: 2
         x: 168
@@ -302,8 +302,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43abaaac56b556343bbeafa08c39e512
-      internalID: 1228307246
+      spriteID: 2f5ac73a0d02e3549a558d29fa19cff4
+      internalID: -1606425584
       vertices: []
       indices: 
       edges: []
@@ -319,14 +319,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Pingu Robot_4: -784901265
-      Pingu Robot_5: -1210535592
-      Pingu Robot_7: 1228307246
-      Pingu Robot_3: 189025202
-      Pingu Robot_6: -972989019
-      Pingu Robot_0: -291633380
-      Pingu Robot_2: 1873628934
-      Pingu Robot_1: 11993365
+      ShieldCompanion_5: 258589687
+      ShieldCompanion_3: -836311855
+      ShieldCompanion_1: -1706593453
+      ShieldCompanion_7: -1606425584
+      ShieldCompanion_0: -1227375741
+      ShieldCompanion_2: -68973789
+      ShieldCompanion_4: 330624810
+      ShieldCompanion_6: -951558816
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

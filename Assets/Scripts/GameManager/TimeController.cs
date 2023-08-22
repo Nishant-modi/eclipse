@@ -83,7 +83,10 @@ public class TimeController : MonoBehaviour
                 {
                     for (int i = 0; i < lights.Length; i++)
                     {
-                        lights[i].SetActive(true); // turn them all on
+                        if (lights[i] != null)
+                        {
+                            lights[i].SetActive(true); // shut them off
+                        }
                     }
                     activateLights = true;
                 }
@@ -105,7 +108,11 @@ public class TimeController : MonoBehaviour
                 {
                     for (int i = 0; i < lights.Length; i++)
                     {
-                        lights[i].SetActive(false); // shut them off
+                        if (lights[i]!=null)
+                        {
+                            lights[i].SetActive(false); // shut them off
+                        }
+                        
                     }
                     activateLights = false;
                 }

@@ -31,7 +31,7 @@ public class ZombieController : MonoBehaviour
     public bool directionLookEnabled = true;
     public TimeController timeCheck;
     public float mainCastDistance = 5f;
-    public float backCastDistance = 2f;
+    public float backCastDistance = -2f;
 
     private Path path;
     private int currentWaypoint = 0;

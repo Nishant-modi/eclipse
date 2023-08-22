@@ -14,14 +14,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform m_CeilingCheck;                          // A position marking where to check for ceilings
     [SerializeField] private Collider2D m_CrouchDisableCollider;                // A collider that will be disabled when crouching
 
-    [SerializeField] private GameObject companionBot;                           //Bot companion that moves with the player
+    //[SerializeField] private GameObject companionBot;                           //Bot companion that moves with the player
     [SerializeField] private CameraController cameraFlip;                                     //For camera follow offset flip
 
     const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
     private bool m_Grounded;            // Whether or not the player is grounded.
     const float k_CeilingRadius = .2f; // Radius of the overlap circle to determine if the player can stand up
     private Rigidbody2D m_Rigidbody2D;
-    private bool m_FacingRight = true;  // For determining which way the player is currently facing.
+    public bool m_FacingRight = true;  // For determining which way the player is currently facing.
     private Vector3 m_Velocity = Vector3.zero;
 
     [Header("Events")]
@@ -145,14 +145,18 @@ public class PlayerController : MonoBehaviour
         m_FacingRight = !m_FacingRight;
 
         // Multiply the player's x local scale by -1.
-        Vector3 theScale = transform.localScale;
+        /*Vector3 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
 
         //Multiply the companion bot's local scale by -1
         Vector3 botScale = companionBot.transform.localScale;
         botScale.x *= -1;
-        companionBot.transform.localScale = botScale;
+        companionBot.transform.localScale = botScale;*/
+
+        transform.Rotate(0, 180f, 0);
+        //companionBot.transform.Rotate(0, 180f, 0);
+
 
         //Flip the camera offset
         Vector3 flipOffset = cameraFlip.offset;
