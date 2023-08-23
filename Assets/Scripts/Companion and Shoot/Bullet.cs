@@ -6,6 +6,8 @@ public class Bullet : MonoBehaviour
 {
     public float speed;
     public int damage;
+    public float distance;
+    //public float laserDelayTime;
     public Rigidbody2D rb;
     
     // Start is called before the first frame update

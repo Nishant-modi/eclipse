@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public PlayerController controller;
     public float runSpeed = 40f;
-
+    public bool canMove = true;
     bool jump = false;
     float horizontalMove = 0;
 
@@ -24,7 +24,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
+        if (canMove)
+        {
+            controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
+        }
+        else
+        {
+            controller.Move(0,false,false);
+        }
         jump = false;
     }
 }

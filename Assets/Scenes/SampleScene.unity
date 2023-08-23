@@ -245,6 +245,11 @@ MonoBehaviour:
   - {fileID: 376767344}
   - {fileID: 659298277}
   - {fileID: 1209950228}
+  - {fileID: 2094164539}
+  - {fileID: 93376342}
+  - {fileID: 1688694260}
+  - {fileID: 278209946}
+  - {fileID: 111182249}
   isDay: 0
 --- !u!4 &68145771
 Transform:
@@ -1444,13 +1449,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 1158159129}
-  bulletPrefab: {fileID: 7007682637793533145, guid: c6b22e36e00faf242bdd19d4e2f85648, type: 3}
-  multipleFire: 0
-  isShield: 0
+  bulletPrefab: {fileID: 7007682637793533145, guid: e32f6308f777f2840adbb672b8299816, type: 3}
+  playerMovement: {fileID: 1460541037}
   bulletSpeed: 5
-  bulletDamage: 10
-  bulletGravityScale: 0.7
+  bulletDamage: 30
+  isPistol: 0
+  isShotgun: 0
+  isBurstgun: 0
+  isExplosive: 1
+  isShield: 0
+  isLaser: 0
   shotgunAngle: 12
+  burstDelayTime: 0.1
+  shieldOffset: {x: 0.5, y: 0, z: 0}
+  bulletDistance: 10
 --- !u!114 &401558150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1577,13 +1589,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 1518846272}
-  bulletPrefab: {fileID: 7007682637793533145, guid: c6b22e36e00faf242bdd19d4e2f85648, type: 3}
-  multipleFire: 1
+  bulletPrefab: {fileID: 7007682637793533145, guid: 54f7fc09f123ed54cbc51df8ef38e303, type: 3}
+  playerMovement: {fileID: 1460541037}
+  bulletSpeed: 10
+  bulletDamage: 2
+  isPistol: 0
+  isShotgun: 1
+  isBurstgun: 0
+  isExplosive: 0
   isShield: 0
-  bulletSpeed: 20
-  bulletDamage: 5
-  bulletGravityScale: 0.01
+  isLaser: 0
   shotgunAngle: 6
+  burstDelayTime: 0.1
+  shieldOffset: {x: 0.5, y: 0, z: 0}
+  bulletDistance: 10
 --- !u!114 &466699404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1894,13 +1913,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 305812414}
-  bulletPrefab: {fileID: 7007682637793533145, guid: c6b22e36e00faf242bdd19d4e2f85648, type: 3}
-  multipleFire: 0
+  bulletPrefab: {fileID: 7007682637793533145, guid: 54f7fc09f123ed54cbc51df8ef38e303, type: 3}
+  playerMovement: {fileID: 1460541037}
+  bulletSpeed: 10
+  bulletDamage: 2
+  isPistol: 0
+  isShotgun: 0
+  isBurstgun: 1
+  isExplosive: 0
   isShield: 0
-  bulletSpeed: 20
-  bulletDamage: 5
-  bulletGravityScale: 0.01
+  isLaser: 0
   shotgunAngle: 12
+  burstDelayTime: 0.1
+  shieldOffset: {x: 0.5, y: 0, z: 0}
+  bulletDistance: 10
 --- !u!114 &499135876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3141,12 +3167,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 764217051}
   bulletPrefab: {fileID: 7007682637793533145, guid: c6b22e36e00faf242bdd19d4e2f85648, type: 3}
-  multipleFire: 0
-  isShield: 0
+  playerMovement: {fileID: 1460541037}
   bulletSpeed: 10
   bulletDamage: 5
-  bulletGravityScale: 0.01
+  isPistol: 1
+  isShotgun: 0
+  isBurstgun: 0
+  isExplosive: 0
+  isShield: 0
+  isLaser: 0
   shotgunAngle: 12
+  burstDelayTime: 0.1
+  shieldOffset: {x: 0.5, y: 0, z: 0}
+  bulletDistance: 10
 --- !u!1 &1016723115
 GameObject:
   m_ObjectHideFlags: 0
@@ -3213,7 +3246,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1050010129
 Transform:
   m_ObjectHideFlags: 0
@@ -3245,13 +3278,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 1562851904}
-  bulletPrefab: {fileID: 7007682637793533145, guid: c6b22e36e00faf242bdd19d4e2f85648, type: 3}
-  multipleFire: 0
-  isShield: 0
-  bulletSpeed: 20
-  bulletDamage: 10
-  bulletGravityScale: 0.01
+  bulletPrefab: {fileID: 7007682637793533145, guid: 1c90f6ed81209604884fc40fb389cc18, type: 3}
+  playerMovement: {fileID: 1460541037}
+  bulletSpeed: 0
+  bulletDamage: 0
+  isPistol: 0
+  isShotgun: 0
+  isBurstgun: 0
+  isExplosive: 0
+  isShield: 1
+  isLaser: 0
   shotgunAngle: 12
+  burstDelayTime: 0.1
+  shieldOffset: {x: 0.5, y: 0, z: 0}
+  bulletDistance: 10
 --- !u!114 &1050010131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3866,7 +3906,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1245806026}
-  - component: {fileID: 1245806028}
   - component: {fileID: 1245806027}
   m_Layer: 0
   m_Name: LazerCompanion
@@ -3906,28 +3945,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 2134630646}
-  bulletPrefab: {fileID: 7007682637793533145, guid: c6b22e36e00faf242bdd19d4e2f85648, type: 3}
-  multipleFire: 0
-  isShield: 0
+  bulletPrefab: {fileID: 7007682637793533145, guid: 2c582d9ea285cac4a945a2c2399685fb, type: 3}
+  playerMovement: {fileID: 1460541037}
   bulletSpeed: 20
-  bulletDamage: 15
-  bulletGravityScale: 0.01
+  bulletDamage: 30
+  isPistol: 0
+  isShotgun: 0
+  isBurstgun: 0
+  isExplosive: 0
+  isShield: 0
+  isLaser: 1
   shotgunAngle: 12
---- !u!114 &1245806028
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1245806025}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5a5172c1cc689043b383a08309f58d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  companionTarget: {fileID: 419911207}
-  companionMoveSpeed: 10
-  playerController: {fileID: 1460541035}
+  burstDelayTime: 0.1
+  shieldOffset: {x: 0.5, y: 0, z: 0}
+  bulletDistance: 10
 --- !u!1 &1272276684
 GameObject:
   m_ObjectHideFlags: 0
@@ -4511,6 +4542,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 1460541035}
   runSpeed: 25
+  canMove: 1
 --- !u!114 &1460541038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4525,6 +4557,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   healthImage: {fileID: 2047858764}
+  health: 0
 --- !u!1 &1508805951
 GameObject:
   m_ObjectHideFlags: 0
@@ -4775,7 +4808,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1562851903}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.186, y: 0.023, z: 0}
+  m_LocalPosition: {x: 0.762, y: 0.023, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
