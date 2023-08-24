@@ -28,7 +28,7 @@ public class PlayerHealth : MonoBehaviour
     public void Heal(int heal)
     {
         health += heal;
-        Mathf.Clamp(health, 0, maxHealth);
+        health = Mathf.Clamp(health, 0, maxHealth);
         healthImage.fillAmount = health / 100f;
 
         if (health <= 0)

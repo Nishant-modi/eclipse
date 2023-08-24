@@ -10,6 +10,8 @@ public class WeaponManager : MonoBehaviour
     public GameObject[] companion;
     public GameObject currentCompanion;
 
+  
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,21 @@ public class WeaponManager : MonoBehaviour
         //companion[0].SetActive(true);
         //currentCompanion = companion[0];
         //currentCompanionIndex = 0;  
+
+        
+    }
+
+    public void ActivateCompanion(int index)
+    {
+        companion[currentCompanionIndex].SetActive(false);
+        currentCompanionIndex = index;
+        companion[currentCompanionIndex].SetActive(true);
+
+    }
+
+    public void DeactivateCompanion()
+    {
+        companion[currentCompanionIndex].SetActive(false);
     }
 
     // Update is called once per frame

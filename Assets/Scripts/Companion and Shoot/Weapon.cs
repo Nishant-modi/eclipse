@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net;
 using System.Xml.Serialization;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Weapon : MonoBehaviour
 {
@@ -9,11 +11,13 @@ public class Weapon : MonoBehaviour
     public Transform firePoint;
     public GameObject bulletPrefab;
     public PlayerMovement playerMovement;
+    public WeaponManager manager;
     
 
     [Header("Bullet details")]
     public float bulletSpeed = 20f;
     public int bulletDamage = 10;
+    public int ammo = 1;
     //public float bulletGravityScale = 0.01f;
 
     [Header("Weapon Type")]
@@ -23,6 +27,7 @@ public class Weapon : MonoBehaviour
     public bool isExplosive;
     public bool isShield;
     public bool isLaser;
+    public bool isMedkit;
 
     [Header("Weapon Specific Details")]
     public float shotgunAngle = 12f;
@@ -30,6 +35,8 @@ public class Weapon : MonoBehaviour
     //public float laserDelayTime = 1f;
     public Vector3 shieldOffset = new Vector3(0.5f, 0f, 0f);
     public float bulletDistance = 10f;
+
+    Coroutine shoot;
 
     Quaternion shotgunAngle1;
     Quaternion shotgunAngle2;
@@ -50,6 +57,10 @@ public class Weapon : MonoBehaviour
             bulletPrefab.GetComponent<ExplosiveBullet>().damage = bulletDamage;
             bulletPrefab.GetComponent<ExplosiveBullet>().distance = bulletDistance;
         }
+        else if(isMedkit)
+        {
+            
+        }
         else
         {
             bulletPrefab.GetComponent<Bullet>().speed = bulletSpeed;
@@ -67,51 +78,75 @@ public class Weapon : MonoBehaviour
     {
         if(Input.GetButtonDown("Fire1"))
         {
-            StartCoroutine(Shoot());
+            if(EventSystem.current.IsPointerOverGameObject())
+            {
+                return;
+            }
+            shoot = StartCoroutine(Shoot());
         }
 
         if(isShield || isLaser)
         {
             if(Input.GetButtonUp("Fire1"))
             {
-                StopShoot();
+                //StopShoot();
             }
         }
     }
     
     IEnumerator Shoot()
     {
-        if (isShotgun)
+        //if(ammo>0)
         {
-            Instantiate(bulletPrefab, firePoint.position, firePoint.rotation * shotgunAngle1);
-            Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-            Instantiate(bulletPrefab, firePoint.position, firePoint.rotation * shotgunAngle2);
-            yield return null;
-        }
-        if(isPistol || isExplosive)
-        {
-            Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-            yield return null;
-        }
-        if(isBurstgun)
-        {
-            Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-            yield return new WaitForSeconds(burstDelayTime);
-            Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-            yield return new WaitForSeconds(burstDelayTime);
-            Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-            yield return null;
+            if (isShotgun)
+            {
+                Instantiate(bulletPrefab, firePoint.position, firePoint.rotation * shotgunAngle1);
+                Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+                Instantiate(bulletPrefab, firePoint.position, firePoint.rotation * shotgunAngle2);
+                //ammo--;
+                yield return null;
+            }
+            if (isPistol || isExplosive)
+            {
+                Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+                //ammo--;
+                yield return null;
+            }
+            if (isBurstgun)
+            {
+                Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+                yield return new WaitForSeconds(burstDelayTime);
+                Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+                yield return new WaitForSeconds(burstDelayTime);
+                Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+                //ammo--;
+                yield return null;
 
+            }
+            if (isShield)
+            {
+                //playerMovement.canMove = false;
+                shield = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+                yield return new WaitForSeconds(3f);
+                Destroy(shield);
+                yield return null;
+                //ammo--;
+            }
+            if (isLaser)
+            {
+                Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+                yield return null;
+                //ammo--;
+            }
+            if (isMedkit)
+            {
+                PlayerHealth ph = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
+                ph.Heal(bulletDamage);
+                yield return null;
+                //ammo--;
+            }
         }
-        if (isShield)
-        {
-            playerMovement.canMove = false;
-            shield = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        }
-        if (isLaser)
-        {
-            Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        }
+        StopCoroutine(shoot);
         
     }
 

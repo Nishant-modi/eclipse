@@ -149,6 +149,7 @@ GameObject:
   - component: {fileID: 7782995740997815753}
   - component: {fileID: 7782995740997815752}
   - component: {fileID: 7782995740997815767}
+  - component: {fileID: 3682919301683124560}
   m_Layer: 5
   m_Name: ShieldButton
   m_TagString: Untagged
@@ -258,4 +259,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7782995740997815752}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3682919301683124560}
+        m_TargetAssemblyTypeName: SpawnItem, Assembly-CSharp
+        m_MethodName: UseCompanion
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3682919301683124560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7782995740997815765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5b15166e1c400045939457cdf71a480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 9064176148318926934, guid: 0ce2e48ec183dfc4ab920bf58b6c6f6c, type: 3}
+  index: 3
+  weaponManager: {fileID: 0}
