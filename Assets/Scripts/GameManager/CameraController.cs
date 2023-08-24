@@ -23,7 +23,7 @@ public class CameraController : MonoBehaviour
             target2 = target1;
         }
         target = (target1.transform.position + target2.transform.position) / 2;
-        Vector3 targetPosition = new Vector3(target.x + offset.x, 0f, -10f);
+        Vector3 targetPosition = new Vector3(target.x + offset.x, target.y + offset.y, -10f);
         transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
     }
 }

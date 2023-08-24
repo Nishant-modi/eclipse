@@ -22,9 +22,9 @@ public class WeaponManager : MonoBehaviour
             companion[i].SetActive(false);
         }
 
-        companion[0].SetActive(true);
-        currentCompanion = companion[0];
-        currentCompanionIndex = 0;  
+        //companion[0].SetActive(true);
+        //currentCompanion = companion[0];
+        //currentCompanionIndex = 0;  
     }
 
     // Update is called once per frame
