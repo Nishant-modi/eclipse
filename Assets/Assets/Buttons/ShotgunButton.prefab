@@ -229,7 +229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -287,3 +287,4 @@ MonoBehaviour:
   item: {fileID: 3626929176466827511, guid: 6f8eef5ce22c48140bdc2567dc4646eb, type: 3}
   index: 2
   weaponManager: {fileID: 0}
+  ammo: 0

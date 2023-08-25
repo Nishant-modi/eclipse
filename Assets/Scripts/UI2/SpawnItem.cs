@@ -36,6 +36,7 @@ public class SpawnItem : MonoBehaviour
         weaponManager.ActivateCompanion(index);
         Slot currentBorder = transform.parent.gameObject.GetComponentInChildren<Slot>();
         currentBorder.ActivateBorder();
+        GameObject.FindGameObjectWithTag("Weapon").GetComponent<Weapon>().pointerOnUI = false;
 
     }
 }

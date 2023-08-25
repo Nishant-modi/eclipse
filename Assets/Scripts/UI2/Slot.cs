@@ -47,5 +47,11 @@ public class Slot : MonoBehaviour
             child.GetComponent<SpawnItem>().SpawnDroppedItem();
             GameObject.Destroy(child.gameObject);
         }
+        GameObject[] weapons = GameObject.FindGameObjectsWithTag("Weapon");
+        foreach(GameObject g in weapons)
+        {
+            g.GetComponent<Weapon>().pointerOnUI = false;
+        }
+            
     }
 }

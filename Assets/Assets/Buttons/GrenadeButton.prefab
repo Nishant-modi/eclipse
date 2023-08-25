@@ -92,7 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -150,6 +150,7 @@ MonoBehaviour:
   item: {fileID: 9018119947043355254, guid: aadcaaeb66397314abbc6c29485fecba, type: 3}
   index: 5
   weaponManager: {fileID: 0}
+  ammo: 0
 --- !u!1 &6619341934494343874
 GameObject:
   m_ObjectHideFlags: 0

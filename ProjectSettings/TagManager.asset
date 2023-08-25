@@ -10,6 +10,7 @@ TagManager:
   - WeaponManager
   - borders
   - FinishLine
+  - Weapon
   layers:
   - Default
   - TransparentFX
