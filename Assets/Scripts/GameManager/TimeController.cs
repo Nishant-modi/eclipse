@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class TimeController : MonoBehaviour
 {
@@ -128,4 +129,9 @@ public class TimeController : MonoBehaviour
         dayDisplay.text = "Day: " + days; // display day counter
     }
 
+
+    public void Retry()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 }

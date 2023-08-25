@@ -9,6 +9,7 @@ TagManager:
   - Shield
   - WeaponManager
   - borders
+  - FinishLine
   layers:
   - Default
   - TransparentFX

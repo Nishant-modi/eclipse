@@ -8,10 +8,13 @@ public class PlayerHealth : MonoBehaviour
     public int maxHealth = 100;
     public Image healthImage;
     public int health;
+    public GameObject gameOverUI;
+    public PlayerMovement pm;
     // Start is called before the first frame update
     void Start()
     {
         health = maxHealth;
+        pm = GetComponent<PlayerMovement>();
     }
 
     public void TakeDamage(int damage)
@@ -22,6 +25,8 @@ public class PlayerHealth : MonoBehaviour
         if(health <= 0)
         {
             print("game over");
+            pm.canMove = false;
+            gameOverUI.SetActive(true);
         }
     }
 

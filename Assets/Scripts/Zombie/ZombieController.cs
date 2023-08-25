@@ -108,7 +108,7 @@ public class ZombieController : MonoBehaviour
         // Jump
         if (jumpEnabled && isGrounded && Mathf.Abs(rb.velocity.y)<0.1)
         {
-            if (target.position.y - 1f > rb.transform.position.y && targetrb.velocity.y == 0 && path.path.Count < 20)
+            if (target.position.y - 1f > rb.transform.position.y && targetrb.velocity.y == 0 && path.path.Count < 30)
             {
                 rb.AddForce(Vector2.up * speed * jumpModifier);
             }

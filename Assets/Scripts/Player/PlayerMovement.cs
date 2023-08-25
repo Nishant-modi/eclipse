@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public bool canMove = true;
     bool jump = false;
     float horizontalMove = 0;
+    public GameObject gameWinUI;
 
     // Update is called once per frame
     void Update()
@@ -33,5 +34,15 @@ public class PlayerMovement : MonoBehaviour
             controller.Move(0,false,false);
         }
         jump = false;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "FinishLine")
+        {
+            canMove = false;
+            gameWinUI.SetActive(true);
+            Debug.Log("finish line reached");
+        }
     }
 }

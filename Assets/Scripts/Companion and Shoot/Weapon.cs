@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Net;
 using System.Xml.Serialization;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -37,7 +38,7 @@ public class Weapon : MonoBehaviour
     public float bulletDistance = 10f;
 
     Coroutine shoot;
-
+    public bool pointerOnUI;
     Quaternion shotgunAngle1;
     Quaternion shotgunAngle2;
     GameObject shield;
@@ -76,9 +77,10 @@ public class Weapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Fire1"))
+        pointerOnUI = EventSystem.current.IsPointerOverGameObject();
+        if (Input.GetMouseButtonDown(0))
         {
-            if(EventSystem.current.IsPointerOverGameObject())
+            if(pointerOnUI)
             {
                 return;
             }
